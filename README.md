@@ -5,10 +5,10 @@ A modern, sleek domain selling landing page built with HTML, CSS, and JavaScript
 ## Screenshots
 
 ### Hero Section
-![Domain Sales Page - Hero Section](./screenshots/home.png)
+![Domain Sales Page - Hero Section](./screen/home.png)
 
 ### Contact Form & Reviews
-![Contact Form and Customer Reviews](./screenshots/reviews.png)
+![Contact Form and Customer Reviews](./screen/reviews.png)
 
 ## Configuration Guide
 
