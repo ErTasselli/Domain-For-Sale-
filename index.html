@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domain For Sale</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Animated Background -->
+        <div class="background-animation">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="orb orb-3"></div>
+        </div>
+
+        <div class="content">
+            <div class="hero">
+                <h1 class="title-gradient"><span class="domain-name">yourdomain.com</span></h1>
+                <p class="subtitle">Domain For Sale</p>
+                <p class="description">Interested in purchasing this domain? Contact me to discuss an offer.</p>
+                
+                <div class="buttons-group">
+                    <button class="btn btn-primary" onclick="document.getElementById('contactForm').scrollIntoView({behavior: 'smooth'})">Contact Me</button>
+                    <button class="btn btn-secondary" onclick="document.getElementById('infoModal').style.display='block'">Information</button>
+                </div>
+            </div>
+
+            <form id="contactForm" class="form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="price">Your Offer (USD)</label>
+                    <div class="price-input-wrapper">
+                        <span class="price-currency">$</span>
+                        <input type="number" id="price" name="price" min="20" step="1" placeholder="20" required>
+                    </div>
+                    <small class="price-hint">Minimum offer: $20</small>
+                </div>
+
+                <div class="form-group checkbox">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I accept the <a href="#" onclick="showTerms()">Terms and Conditions</a> and Privacy Policy</label>
+                </div>
+
+                <button type="submit" class="btn btn-submit">Send Message</button>
+            </form>
+
+            <div class="success-message" id="successMessage" style="display: none;">
+                <p>Thank you for your message! I'll contact you as soon as possible.</p>
+            </div>
+
+            <!-- Reviews Section -->
+            <div id="reviews" class="reviews-section">
+                <h2>Customer Reviews</h2>
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                        <p class="review-text">"Excellent service! The domain transfer was smooth and professional. Highly recommended!"</p>
+                        <p class="review-author">- John Smith</p>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                        <p class="review-text">"Fast and reliable. The whole process took less than a week. Great experience!"</p>
+                        <p class="review-author">- Sarah Johnson</p>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                        <p class="review-text">"Very responsive and trustworthy. I felt completely secure with the transaction."</p>
+                        <p class="review-author">- Michael Chen</p>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                        <p class="review-text">"Professional approach and clear communication throughout. Would buy again!"</p>
+                        <p class="review-author">- Emma Davis</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="social-links">
+            <a href="https://andreatasselli.it" target="_blank" class="social-icon" title="Website">🔗</a>
+            <a href="#reviews" onclick="document.getElementById('reviews').scrollIntoView({behavior: 'smooth'})" class="social-icon" title="Reviews">⭐</a>
+        </div>
+    </div>
+
+    <!-- Information Modal -->
+    <div id="infoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeInfo()">&times;</span>
+            <h2>Domain Transfer Information</h2>
+            
+            <h3>Domain Transfer Process</h3>
+            <p>Once we agree on a price and terms, the domain transfer process will follow these steps:</p>
+            <ul>
+                <li><strong>Step 1 - Agreement:</strong> We confirm the sale price and payment details. A 50% deposit is required to proceed.</li>
+                <li><strong>Step 2 - Payment:</strong> You make the deposit payment via your preferred method (bank transfer, PayPal, or cryptocurrency).</li>
+                <li><strong>Step 3 - Authorization:</strong> Once payment is confirmed, I will unlock the domain and request the authorization code (EPP code).</li>
+                <li><strong>Step 4 - Transfer:</strong> You receive the EPP code and can initiate the transfer through your domain registrar.</li>
+                <li><strong>Step 5 - Completion:</strong> The transfer is processed and finalized. The remaining 50% payment is due upon successful transfer completion.</li>
+            </ul>
+            
+            <h3>Transfer Timeline</h3>
+            <p><strong>Total time:</strong> 5-7 business days from agreement to full domain ownership transfer.</p>
+            <ul>
+                <li><strong>Agreement & Deposit:</strong> 1 business day</li>
+                <li><strong>Domain Unlock & EPP Code:</strong> 1-2 business days</li>
+                <li><strong>Domain Transfer Processing:</strong> 3-5 business days (depends on your registrar)</li>
+                <li><strong>Final Confirmation:</strong> 24 hours</li>
+            </ul>
+            <p>The transfer process is secure and follows ICANN (Internet Corporation for Assigned Names and Numbers) standards to ensure a smooth and legitimate transaction.</p>
+        </div>
+    </div>
+
+    <!-- Terms and Conditions Modal -->
+    <div id="termsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeTerms()">&times;</span>
+            <h2>Terms and Conditions & Privacy Policy</h2>
+            
+            <h3>1. General Information</h3>
+            <p>This website is managed by the domain owner. By using this site, you accept these terms and conditions in their entirety.</p>
+            
+            <h3>2. Contact Form Usage</h3>
+            <p>The contact form on this website is intended exclusively for communications related to the purchase of the domain. By submitting a message through the contact form, you consent to the processing of your personal data as described in this policy.</p>
+            
+            <h3>3. Collection and Use of Personal Data</h3>
+            <p>When you use the contact form, we collect the following personal data:</p>
+            <ul>
+                <li>Name</li>
+                <li>Email address</li>
+                <li>Your offer amount</li>
+                <li>Message content</li>
+            </ul>
+            <p>This data is used exclusively to respond to your request and will not be shared with third parties without your explicit consent.</p>
+            
+            <h3>4. Data Retention</h3>
+            <p>Personal data collected through the contact form will be retained for as long as necessary to respond to your request and for a maximum of 24 months, after which it will be securely deleted.</p>
+            
+            <h3>5. Your Rights</h3>
+            <p>Under the General Data Protection Regulation (GDPR), you have the right to access, rectify, delete, or limit your personal data.</p>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
